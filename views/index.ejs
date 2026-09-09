@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+<% if (loggedIn) { %>
+
+  <div class="page-header">
+    <h1>Submit a Complaint</h1>
+    <p class="page-subtitle">Fill in the details below. Our team will review your report shortly.</p>
+  </div>
+
+  <% if (typeof success !== "undefined" && success) { %>
+    <div class="success-message">
+      <span class="icon">✓</span> <%= success %>
+    </div>
+  <% } %>
+
+  <form action="/complaints" method="POST" class="form-box card-form">
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input 
+        type="text" 
+        id="subject" 
+        name="subject" 
+        placeholder="e.g., Wifi connectivity issue in Library" 
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea 
+        id="description" 
+        name="description" 
+        rows="5" 
+        placeholder="Provide as much detail as possible..." 
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-full">Submit Complaint</button>
+  </form>
+
+<% } else { %>
+
+  <div class="welcome-card">
+    <div class="welcome-badge">Official Portal</div>
+    <h1>FUZA Complaint Management System</h1>
+    <p class="welcome-description">
+      A centralized platform to voice your concerns, report issues, and track resolutions efficiently.
+    </p>
+    
+    <div class="welcome-actions">
+      <a href="/login" class="btn btn-primary">Login to Account</a>
+      <a href="/register" class="btn btn-outline">Create Account</a>
+    </div>
+  </div>
+
+<% } %>
+
+<%- include('partials/footer') %>

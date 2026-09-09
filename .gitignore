@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Environment variables & secrets
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs & Runtime Data
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Uploads directory (for local file testing)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# macOS & System files
+.DS_Store
+Thumbs.db
+
+# Vercel deployment folder
+.vercel/

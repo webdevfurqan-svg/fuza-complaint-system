@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FUZA Complaint Management System</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-accent">FUZA Complaint</span> Management System
+    </div>
+    <nav class="nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <% if (typeof loggedIn !== "undefined" && loggedIn) { %>
+        <span class="welcome-text">Welcome, <strong><%= name %></strong></span>
+        <a href="/logout" class="nav-btn nav-btn-outline">Logout</a>
+      <% } else { %>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/register" class="nav-btn nav-btn-primary">Register</a>
+      <% } %>
+      <a href="/admin/login" class="nav-link admin-link">Admin</a>
+    </nav>
+  </header>
+  <main class="container">
