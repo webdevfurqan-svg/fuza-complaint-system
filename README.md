@@ -28,7 +28,7 @@ A full-stack, serverless-ready complaint tracking platform designed to streamlin
 
 ## 🚀 Live Demo & Repository
 
-* **Live App:** [https://fuza-complaints.vercel.app](https://fuza-complaints.vercel.app) *(Update with your live URL)*
+* **Live App:** [https://fuza-complaint-system.vercel.app/](https://fuza-complaint-system.vercel.app/) 
 * **GitHub Repository:** [https://github.com/webdevfurqan-svg/fuza-complaint-system](https://github.com/webdevfurqan-svg/fuza-complaint-system)
 
 ---

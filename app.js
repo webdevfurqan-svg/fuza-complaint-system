@@ -26,7 +26,7 @@ const connectDB = async () => {
 connectDB();
 
 app.set("view engine", "ejs");
-app.set("trust proxy", 1); // required behind Vercel's proxy for secure cookies
+app.set("trust proxy", 1); 
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
